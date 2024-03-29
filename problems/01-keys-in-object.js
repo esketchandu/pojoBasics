@@ -14,11 +14,18 @@ keysInObject(foods); // => ["apple", "lemon", "mango"]
 
 function keysInObject(obj) {
   // Your code here
-  //test commit and edited
-  // commit without node_modules
-  // commit with node_midules
-
+  const objKeys = []
+  for (let key in obj)
+  {
+    objKeys.push(key)
+  }
+    return objKeys;
 }
+
+let animals = {dog: 'Wolfie', cat: 'Jet', bison: 'Bilbo'}
+let foods = {apple: 'tart', lemon: 'sour', mango: 'sweet'}
+console.log(keysInObject(animals)); // => ["dog", "cat", "bison"]
+console.log(keysInObject(foods)); // => ["apple", "lemon", "mango"]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keysInObject;
