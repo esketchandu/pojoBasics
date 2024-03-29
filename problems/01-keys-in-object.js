@@ -12,20 +12,28 @@ keysInObject(animals); // => ["dog", "cat", "bison"]
 keysInObject(foods); // => ["apple", "lemon", "mango"]
 ***********************************************************************/
 
-function keysInObject(obj) {
+// function keysInObject(obj) {
   // Your code here
+//   const objKeys = []
+//   for (let key in obj)
+//   {
+//     objKeys.push(key)
+//   }
+//     return objKeys;
+// }
+
+// Second Solution - Objects.keys
   const objKeys = []
-  for (let key in obj)
-  {
-    objKeys.push(key)
-  }
-    return objKeys;
-}
+  Object.keys(animals)
+};
+
+
 
 let animals = {dog: 'Wolfie', cat: 'Jet', bison: 'Bilbo'}
 let foods = {apple: 'tart', lemon: 'sour', mango: 'sweet'}
-console.log(keysInObject(animals)); // => ["dog", "cat", "bison"]
-console.log(keysInObject(foods)); // => ["apple", "lemon", "mango"]
-
+//console.log(keysInObject(animals)); // => ["dog", "cat", "bison"]
+//console.log(keysInObject(foods)); // => ["apple", "lemon", "mango"]
+console.log(secondSolution(animals));
+console.log(secondSolution(foods));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keysInObject;
